@@ -32,32 +32,36 @@ rm -rf kali-anonsurf
 rm -rf hammer
 rm -rf sqlmap
 if [ -d kali-anonsurf ]; then
-rm -r kali-anonsurf
+	rm -r kali-anonsurf
 fi
 if [ -d hammer ]; then
-rm -r hammer
+	rm -r hammer
 fi
 if [ -d sqlmap ]; then
-rm -r sqlmap
+	rm -r sqlmap
 fi
 clear
 echo "Please Wait..."
 git clone https://github.com/sqlmapproject/sqlmap >/dev/null 2>&1
 if [ -d sqlmap ]; then
-echo ""
+	echo ""
 else
-git clone https://github.com/sqlmapproject/sqlmap
+	git clone https://github.com/sqlmapproject/sqlmap
 fi
-git clone https://github.com/Und3rf10w/kali-anonsurf >/dev/null 2>&1
+	git clone https://github.com/Und3rf10w/kali-anonsurf >/dev/null 2>&1
 if [ -d kali-anonsurf ]; then
-echo ""
+	echo ""
 else
-git clone https://github.com/Und3rf10w/kali-anonsurf
+	git clone https://github.com/Und3rf10w/kali-anonsurf
 fi
-git clone https://github.com/cyweb/hammer >/dev/null 2>&1
+	git clone https://github.com/cyweb/hammer >/dev/null 2>&1
 if [ -d hammer ]; then
-echo ""
+	echo ""
 else
-git clone https://github.com/cyweb/hammer
+	git clone https://github.com/cyweb/hammer
 fi
-rm move.sh
+	rm move.sh
+if [ -f move.sh ]; then
+rm -r move.sh
+fi
+clear
